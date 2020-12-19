@@ -1,0 +1,24 @@
+#board-display{
+    height: 90vh;
+    width:80vw;
+    margin-left: 10vw;
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    grid-template-rows: repeat(8, auto);
+    justify-content: center;
+    align-content: center;
+    /* background-color: black; */
+    /* border-color: black;
+    border-style: groove; */
+    color: blue;
+}
+
+.box{
+    display: grid;
+    width: 9vw;
+    height: 8vh;
+    border-color: black;
+    border-style:groove;
+    justify-content: center;
+    align-content: center;
+}

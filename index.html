@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goldrush</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.css">
+</head>
+
+<body>
+    <div id="board-display"></div>
+
+    <div id="player-info">
+        <span>Player 1</span><span id="p1" class="points"></span>
+        <button id="start">Start Game</button>
+        <span>Player 2</span><span id="p2" class="points"></span>
+    </div>
+
+    <script id="board-template" type="text/x-handlebars-template">
+        {{#each this.matrix}}
+            {{#each this}}
+                <span class="box">{{this}}</span>
+            {{/each}}
+
+        {{/each}}
+    </script>
+
+    <script id="points-template" type="text/x-handlebars-template">
+        <span>{{points}}</span>
+    </script>
+
+
+    
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/handlebars/dist/handlebars.js"></script>
+    <script src="Renderer.js"></script>
+    <script src="Matrix.js"></script>
+    <script src="GoldRush.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
