@@ -9,7 +9,7 @@ class Matrix {
         for (let r = 0; r < x; r++) {
             matrix.push([])
             for (let c = 0; c < y; c++) {
-                matrix[r].push('.')
+                matrix[r].push(' ')
             }
         }
         return matrix

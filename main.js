@@ -8,17 +8,13 @@ let y = 8
 
 
 const board = new GoldRush()
-board.generateBoard(x, y)
-
-renderer.renderBoard(board)
 
 $('#start').click(function () {
     const board = new GoldRush()
     board.generateBoard(x, y)
 
     renderer.renderBoard(board)
-    renderer.renderPoints("p1", board.p1.points)
-    renderer.renderPoints("p1", board.p2.points)
+    renderer.renderPoints(board)
 })
 
 $(document).keypress(function (e) {

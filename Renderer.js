@@ -11,12 +11,12 @@ class Renderer {
         }
     }
 
-    renderPoints(player, points){
+    renderPoints(board){
     try {
         const source = $('#points-template').html();
         const template = Handlebars.compile(source);
-        let newHTML = template(points);
-        $(`#${player}`).empty().append(newHTML);
+        let newHTML = template(board);
+        $(`#player-info`).empty().append(newHTML);
     } catch (err) {
         console.log(err)
     }

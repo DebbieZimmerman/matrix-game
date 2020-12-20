@@ -6,17 +6,18 @@ class GoldRush extends Matrix {
             this.rows = null,
             this.columns = null,
             this.p1 = {
-                avatar: "&#128516",
+                avatar: "&#128523",
                 xPos: 0,
                 yPos: 0,
                 points: 0
             },
             this.p2 = {
-                avatar: "2",
+                avatar: "&#129316",
                 xPos: 0,
                 yPos: 0,
                 points: 0
             }
+            this.emojis = ['&#127846', '&#127874', '&#127848', '&#127849', '&#127850', '&#127851', '&#127853', '&#127856']
 
     }
 
@@ -100,16 +101,21 @@ class GoldRush extends Matrix {
     }
 
     generateCoins() {
-        const coins = this.getCoinNumber()
+        const coins = this.getCoinAmount()
         for (let i = 0; i < coins; i++) {
             const x = this.getRowNumber()
             const y = this.getColNumber()
-            this.alter(x, y, 'c')
+            const z = this.getCoinNumber()
+            this.alter(x, y, this.emojis[z])
         }
     }
 
     getCoinNumber() {
-        return Math.floor(Math.random() * this.rows * this.columns)
+        return Math.floor(Math.random() * this.emojis.length)
+    }
+
+    getCoinAmount() {
+        return Math.floor(Math.random() * this.rows * this.columns) + 10
     }
 
     getRowNumber() {
