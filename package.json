@@ -1,7 +1,26 @@
 {
   "dependencies": {
+    "elevation-pr": "^2.1.0",
     "font-awesome": "^4.7.0",
     "handlebars": "^4.7.6",
     "jquery": "^3.5.1"
-  }
+  },
+  "name": "matrix-game",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "review": "node node_modules/elevation-pr/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DebbieZimmerman/matrix-game.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DebbieZimmerman/matrix-game/issues"
+  },
+  "homepage": "https://github.com/DebbieZimmerman/matrix-game#readme",
+  "description": ""
 }
