@@ -3,18 +3,19 @@ body{
 }
 
 button{
-    background-color:#e89fc7;
+    color: #e676b3;
+    background-color: white;
+    padding: 1px 3px 1px 3px;
     border-radius: 5px;
-    border-color: white;
-    font-size: large;
-    margin: 1vw;
-    padding: 1vh;
-    color: white;
+    border-color: #e676b3;
+    border-width: 3px;
+    border-style: double;
+    height: fit-content;
     font-family: Lobster;
+    font-size: x-large;
 }
 
 #display{
-    /* background-image: url("https://static.vecteezy.com/system/resources/previews/000/100/954/non_2x/free-bakery-vector.png"); */
     background-image: url("https://img.elo7.com.br/product/original/2CFBF2D/painel-sublimado-ursinho-panda-fundo-verde-bambu-300x170mt.jpg");
     background-size: contain;
     background-position: right;
@@ -23,16 +24,30 @@ button{
     position: relative;
     display: grid;
     grid-template-columns: 15vw, 85vw;
-    grid-template-areas: "p b";
+    grid-template-areas: "t t" "p b" "p b";
     font-family: Lobster;
-    color: #e89fc7;
+    color:  #e676b3;
+}
+
+#tagline{
+    grid-area: t;
+    margin-left: 17vw;
+    justify-self: center;
+    font-size: xx-large;
+    color: #e676b3;
+    background-color:white;
+    padding: 1px 5px 1px 5px;
+    border-radius: 3px;
+    border-color: e676b3;
+    border-style:double;
 }
 
 #player-info{
     grid-area: p;
     display: grid;
+    grid-template-rows: repeat(5);
     width: 15vw;
-    align-content: center;
+    margin-top: 0vh;
     justify-content: center;
     text-justify: center;
     font-size: xx-large;
@@ -40,9 +55,7 @@ button{
 
 #board-display{
     grid-area: b;
-    height: 96vh;
-    /* width: 85vw; */
-
+    height: 90vh;
     display: grid;
     grid-template-columns: repeat(8, auto);
     grid-template-rows: repeat(8, auto);

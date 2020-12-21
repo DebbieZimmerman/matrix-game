@@ -16,14 +16,16 @@
 <body>
 
     <div id="display">
-        <div id="picture"></div>
+        <div id="tagline">How many sweets can you eat?</div>
         <div id="player-info">
             <span>Player 1 &#128523</span>
-            <button id="start">Start Game</button>
+            <button class="start"> &#127848 Start Game &#127848 </button>
             <span>Player 2 &#129316</span>
+            
         </div>
 
         <div id="board-display"></div>
+    
     </div>
 
     <script id="board-template" type="text/x-handlebars-template">
@@ -39,7 +41,7 @@
         <div>
             <p>{{{this.p1.avatar}}} {{this.p1.points}} points</p>
         </div> 
-        <button id="start">Play Again</button>
+        <button class="start">Play Again</button>
         <div>
             <p>{{{this.p2.avatar}}} {{this.p2.points}} points</p>
         </div>

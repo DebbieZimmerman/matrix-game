@@ -1,28 +1,50 @@
-//Player 1 will control their player using the WASD keys, and Player 2 should use the IJKL keys.
-// A player may not move to a location on the board that has a wall or another player, but they should get 10 points any time they move to a location with a coin on it. In this case, the coin should disappear from the board.
-
 const renderer = new Renderer()
-
 let x = 8
 let y = 8
 
+let board = new GoldRush(x, y)
 
-const board = new GoldRush()
+$('#display').on('click', $('.start'), function () {
 
-$('#start').click(function () {
-    const board = new GoldRush()
     board.generateBoard(x, y)
 
     renderer.renderBoard(board)
-    renderer.renderPoints(board)
 })
 
-$(document).keypress(function (e) {
-    console.log(e)
-    if (e.which == 119) {
-        board.movePlayer('p2', "up")
+$(document).on('keydown', function (e) {
+    try {
+        if (e.which === 87) {
+            board.movePlayer('p1', "up")
+        } else
+            if (e.which === 65) {
+                board.movePlayer('p1', "left")
+            } else
+                if (e.which === 83) {
+                    board.movePlayer('p1', "down")
+                } else
+                    if (e.which === 68) {
+                        board.movePlayer('p1', "right")
+                    } else
+                        if (e.which === 73) {
+                            board.movePlayer('p2', "up")
+                        } else
+                            if (e.which === 74) {
+                                board.movePlayer('p2', "left")
+                            } else
+                                if (e.which === 75) {
+                                    board.movePlayer('p2', "down")
+                                } else
+                                    if (e.which === 76) {
+                                        board.movePlayer('p2', "right")
+                                    } else {
+                                        return
+                                    }
+    } catch (err) {
+        console.log(err)
     }
-
-    renderer.renderBoard(board)
-
+    try {
+        renderer.renderBoard(board)
+    } catch (err) {
+        console.log(err)
+    }
 })
