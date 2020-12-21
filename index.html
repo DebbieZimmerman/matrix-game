@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Shoppe</title>
+    <link rel="icon" href="https://cdn2.iconfinder.com/data/icons/food-drink-60/50/1F9C1-cupcake-512.png"
+        type="image/icon type">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.css">
+</head>
+
+<body>
+
+    <div id="display">
+        <div id="tagline">How many sweets can you eat?</div>
+        <div id="player-info">
+            <span>Player 1 &#128523</span>
+            <button class="start"> &#127848 Start Game &#127848 </button>
+            <span>Player 2 &#129316</span>
+            
+        </div>
+
+        <div id="board-display"></div>
+    
+    </div>
+
+    <script id="board-template" type="text/x-handlebars-template">
+        {{#each this.matrix}}
+            {{#each this}}
+                <span class="box">{{{this}}}</span>
+            {{/each}}
+
+        {{/each}}
+    </script>
+
+    <script id="points-template" type="text/x-handlebars-template">
+        <div>
+            <p>{{{this.p1.avatar}}} {{this.p1.points}} points</p>
+        </div> 
+        <button class="start">Play Again</button>
+        <div>
+            <p>{{{this.p2.avatar}}} {{this.p2.points}} points</p>
+        </div>
+        
+    </script>
+
+
+
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/handlebars/dist/handlebars.js"></script>
+    <script src="Renderer.js"></script>
+    <script src="Matrix.js"></script>
+    <script src="GoldRush.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

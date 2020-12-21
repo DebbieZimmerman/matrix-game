@@ -1,0 +1,76 @@
+body{
+    background-color: #A1E1E1;
+}
+
+button{
+    color: #e676b3;
+    background-color: white;
+    padding: 1px 3px 1px 3px;
+    border-radius: 5px;
+    border-color: #e676b3;
+    border-width: 3px;
+    border-style: double;
+    height: fit-content;
+    font-family: Lobster;
+    font-size: x-large;
+}
+
+#display{
+    background-image: url("https://img.elo7.com.br/product/original/2CFBF2D/painel-sublimado-ursinho-panda-fundo-verde-bambu-300x170mt.jpg");
+    background-size: contain;
+    background-position: right;
+    margin-right: 10vw;
+    background-repeat: no-repeat;
+    position: relative;
+    display: grid;
+    grid-template-columns: 15vw, 85vw;
+    grid-template-areas: "t t" "p b" "p b";
+    font-family: Lobster;
+    color:  #e676b3;
+}
+
+#tagline{
+    grid-area: t;
+    margin-left: 17vw;
+    justify-self: center;
+    font-size: xx-large;
+    color: #e676b3;
+    background-color:white;
+    padding: 1px 5px 1px 5px;
+    border-radius: 3px;
+    border-color: e676b3;
+    border-style:double;
+}
+
+#player-info{
+    grid-area: p;
+    display: grid;
+    grid-template-rows: repeat(5);
+    width: 15vw;
+    margin-top: 0vh;
+    justify-content: center;
+    text-justify: center;
+    font-size: xx-large;
+}
+
+#board-display{
+    grid-area: b;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    grid-template-rows: repeat(8, auto);
+    justify-content: center;
+    align-content: center;
+}
+
+.box{
+    display: grid;
+    width: 8vw;
+    height: 10vh;
+    border-color: white;
+    border-style: dotted;
+    border-width: 1px;
+    justify-content: center;
+    align-content: center;
+    font-size: xx-large;
+}
